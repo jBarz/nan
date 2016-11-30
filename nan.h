@@ -357,7 +357,7 @@ class HandleScope {
   HandleScope(const HandleScope &);
   void operator=(const HandleScope &);
   void *operator new(size_t size);
-  void operator delete(void *, size_t);
+  void operator delete(void *, size_t){};
 };
 
 class EscapableHandleScope {
@@ -398,7 +398,7 @@ class EscapableHandleScope {
   EscapableHandleScope(const EscapableHandleScope &);
   void operator=(const EscapableHandleScope &);
   void *operator new(size_t size);
-  void operator delete(void *, size_t);
+  void operator delete(void *, size_t){};
 };
 
 //=== TryCatch =================================================================
